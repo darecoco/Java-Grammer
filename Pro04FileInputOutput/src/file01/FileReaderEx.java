@@ -16,7 +16,7 @@ public class FileReaderEx {
 			
 			fin = new FileReader("C:\\Windows\\system.ini");
 			int c;
-			// fin이 가리키는 파일에서 한 문자씩 읽어서 c에 저장하고,
+			// fin이 가리키는 파일(system.ini)에서 한 문자씩 읽어서 c에 저장하고,
 			// fin객체변수가 파일의 끝에 도달하면 -1의 값을 c에게 넘겨준다.
 			// -1은 파일의 끝을 의미한다. 그래서 true를 반환하면 파일의 끝까지 읽어서 화면에 출력한다.
 			while((c = fin.read()) != -1) {
