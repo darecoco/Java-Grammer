@@ -16,6 +16,7 @@ public class ThreadInterruptEx extends JFrame{
 	public ThreadInterruptEx() {
 		setTitle("Thread를 상속 받은 타이머 스레드 예제");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//창을 닫을 때 프로그램 종료
 		Container c = getContentPane();
 		c.setLayout(new FlowLayout());
 		
@@ -26,6 +27,7 @@ public class ThreadInterruptEx extends JFrame{
 		th = new Thread(runnable); // runnable객체를 가지고 th 스레드 객체 생성, 생성자 호출
 		c.add(timerLabel); //컨테이너 레이블 추가
 		
+		// 버튼을 생성하고 ACtionListener 등록
 		JButton btn = new JButton("TimeKiller");
 		// "TimeKiller"이름을 가진 btn 버튼 생성
 		btn.addActionListener(new ActionListener() {
@@ -35,7 +37,7 @@ public class ThreadInterruptEx extends JFrame{
 				//interrupt()메소드가 동작하면 강제적으로 InterruptedExceptiond예외를 방생시켜 catch문장을 실행한다.
 				//따라서 스레드 종료(return)
 				JButton btn = (JButton)e.getSource();
-				btn.setEnabled(false);
+				btn.setEnabled(false); //버튼 비활성화
 			}
 		});
 		c.add(btn);
