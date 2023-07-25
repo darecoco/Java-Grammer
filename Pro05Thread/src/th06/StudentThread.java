@@ -12,10 +12,5 @@ public class StudentThread extends Thread{
 	public void run() {
 		for(int i=0; i<10; i++)
 			board.add();
-		try {
-			sleep(500);
-		}catch(InterruptedException e) {
-			return;
-		}
 	}
 }
